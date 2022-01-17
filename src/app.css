@@ -133,3 +133,27 @@ article.next {
     transition: .4s ease;
     opacity: 0;
 }
+.imagesBtn {
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.imagesBtn button {
+    width: 10px;
+    height: 10px;
+
+    border: transparent;
+    background-color: #777;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: .4s;
+}
+.imagesBtn button.active {
+    background-color: #fff;    
+}
