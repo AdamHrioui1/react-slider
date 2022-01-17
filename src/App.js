@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './app.css'
 import Person0 from './Testimonial/person1.jpg'
 import data from './data';
+import ImageBtn from './ImageBtn';
  
 function App() {
   const [index, setIndex] = useState(0)
@@ -20,6 +21,10 @@ function App() {
     }, 3000)
     return () => clearInterval(slider)
   }, [index])
+ 
+  const changeIndexValue = (index) => {
+    return setIndex(index)
+  }
 
   return (
     <div className="App">
@@ -56,6 +61,9 @@ function App() {
           <button className="btn prevBtn" type='button' onClick={() => setIndex(index - 1)} >L</button>
           <button className="btn nextBtn" type='button' onClick={() => setIndex(index + 1)}>R</button>
         </div>
+
+        <ImageBtn index={index} data={data} changeIndexValue={changeIndexValue} />
+
     
       </div>
     </div>
